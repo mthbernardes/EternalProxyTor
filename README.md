@@ -1,5 +1,5 @@
 # EternalProxyTor
-
+Use tor as proxy to bypass IP limit querys
 
 #Dependencies
 <pre>
