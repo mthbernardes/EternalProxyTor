@@ -9,8 +9,8 @@ class TorProxy(object):
 	def __init__(self,):
 		pass
 
-	def connect(self, url, method):
-		r = getattr(requests, method)(url,proxies=proxies)
+	def connect(self, url, method,data=None,headers=None):
+		r = getattr(requests, method)(url,proxies=proxies,data=data,headers=headers)
 		return r
 
 	def new_ip(self,):
