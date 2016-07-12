@@ -19,7 +19,7 @@ class TorProxy(object):
 		self.conn.close()
 
 	def check_ip(self,):
-		self.url = "http://ipinfo.io"
+		self.url = "http://myexternalip.com/json"
 		self.r = requests.get(self.url,proxies=proxies)
 		try:
 			return json.loads(self.r.content)['ip']
