@@ -16,7 +16,7 @@ http://sacharya.com/crawling-anonymously-with-tor-in-python/
 >>>from ept import ProxyTor
 >>>tor.check_ip()
 89.187.144.122
->>>tor.new_ip()
+>>>tor.signal()
 >>>tor.check_ip()
 77.247.181.163
 >>>tor.connect('https://google.com','post')
