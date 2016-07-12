@@ -30,11 +30,23 @@ forward-socks5 / localhost:9050 .
 
 #Usage
 <pre>
+#import lib
 >>>from ept import ProxyTor
+
+#Create object from ProxyTor
+>>>tor = ProxyTor()
+
+#Check your current IP
 >>>tor.check_ip()
 89.187.144.122
->>>tor.signal()
+
+#Get new IP from a specific country
+>>>tor.signal(country='NL')
+
 >>>tor.check_ip()
 77.247.181.163
->>>tor.connect('https://google.com','post')
+#Connect to a website using tor, this function is based on lib requests.
+>>>r = tor.connect('https://google.com',method='post')
+>>>r.status_code
+200
 </pre>
