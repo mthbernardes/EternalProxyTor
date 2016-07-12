@@ -9,7 +9,24 @@ apt-get install tor privoxy
 </pre>
 
 #Install and configure TOR
-http://sacharya.com/crawling-anonymously-with-tor-in-python/
+<pre>
+<b>Restart tor</b>
+/etc/init.d/tor restart
+
+<b>Enable Cotrole port</b>
+Edit the file /etc/tor/torrc and remove the # from,
+ControlPort 9051
+
+<b>Restart tor</b>
+/etc/init.d/tor restart
+
+<b>Privoxy</b>
+Make privoxy use tor, edit the file /etc/privoxy/config and remove the # from,
+forward-socks5 / localhost:9050 .
+
+<b>Restart Privoxy</b>
+/etc/init.d/privoxy restart
+</pre>
 
 #Usage
 <pre>
