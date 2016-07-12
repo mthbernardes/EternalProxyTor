@@ -8,8 +8,8 @@ class TorProxy(object):
 	def __init__(self,):
 		pass
 
-	def connect(self, url, method,data=None,headers=None):
-		r = getattr(requests, method)(url,proxies=proxies,data=data,headers=headers)
+	def connect(self, url, method,data=None,headers=None,cookies=None,auth=None,params=None,json=None,files=None):
+		r = getattr(requests, method)(url,proxies=proxies,data=data,headers=headers,cookies=cookies,auth=auth,params=params,json=json,files=None)
 		return r
 
 	def signal(self,cmd="NEWNYM",country=None):
