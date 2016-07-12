@@ -13,7 +13,7 @@ class TorProxy(object):
 		return r
 
 	def signal(self,cmd="NEWNYM",country=None):
-		self.conn = TorCtl.connect(controlAddr="127.0.0.1", controlPort=9051, passphrase="RTFM_FODAO")
+		self.conn = TorCtl.connect(controlAddr="127.0.0.1", controlPort=9051)
 		self.conn.send_signal('HUP')
 		if country:
 			country = '{%s}' %country.upper()
