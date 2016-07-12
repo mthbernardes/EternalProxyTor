@@ -45,6 +45,7 @@ forward-socks5 / localhost:9050 .
 
 >>>tor.check_ip()
 77.247.181.163
+
 #Connect to a website using tor, this function is based on lib requests.
 >>>r = tor.connect('https://google.com',method='post')
 >>>r.status_code
