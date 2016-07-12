@@ -3,6 +3,7 @@ Use tor as proxy to bypass IP limit querys
 
 #Dependencies
 <pre>
+pip install EPT
 pip install requests
 pip install git+https://github.com/aaronsw/pytorctl.git
 apt-get install tor privoxy
